@@ -9,5 +9,8 @@ import UIKit
 
 class StartPersonalityTestViewController: UIViewController {
 
-
+    @IBAction func startTestTapped(_ sender: Any) {
+        let vc = QuestionaryViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

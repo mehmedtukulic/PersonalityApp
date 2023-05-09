@@ -9,12 +9,14 @@ import UIKit
 
 class QuestionaryViewController: UIViewController {
 
+    private let viewModel = QuestionaryViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Task {
+            await viewModel.viewDidload()
+        }
     }
-
-
-
 
 }

@@ -25,6 +25,7 @@
 		D07DFF6B2A0AF7DB00F10B30 /* QuestionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF6A2A0AF7DB00F10B30 /* QuestionsRepository.swift */; };
 		D07DFF6D2A0AF7F900F10B30 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF6C2A0AF7F900F10B30 /* Question.swift */; };
 		D07DFF6F2A0AF85900F10B30 /* QuestionsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF6E2A0AF85900F10B30 /* QuestionsRequests.swift */; };
+		D07DFF712A0AF8F400F10B30 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF702A0AF8F400F10B30 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D07DFF6A2A0AF7DB00F10B30 /* QuestionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsRepository.swift; sourceTree = "<group>"; };
 		D07DFF6C2A0AF7F900F10B30 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D07DFF6E2A0AF85900F10B30 /* QuestionsRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsRequests.swift; sourceTree = "<group>"; };
+		D07DFF702A0AF8F400F10B30 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				D07DFF582A0AF14900F10B30 /* Network */,
+				D07DFF702A0AF8F400F10B30 /* Observable.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07DFF712A0AF8F400F10B30 /* Observable.swift in Sources */,
 				D07DFF262A0AE94700F10B30 /* ViewController.swift in Sources */,
 				D07DFF652A0AF71C00F10B30 /* QuestionaryViewController.swift in Sources */,
 				D07DFF602A0AF2FD00F10B30 /* StartPersonalityTestViewController.swift in Sources */,
