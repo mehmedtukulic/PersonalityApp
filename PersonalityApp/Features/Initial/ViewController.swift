@@ -17,8 +17,7 @@ final class ViewController: UIViewController {
 
     private func loadInitialScreen() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            let vc = UIViewController()
-            vc.view.backgroundColor = .red
+            let vc = StartPersonalityTestViewController()
             self?.navigationController?.setViewControllers([vc], animated: true)
         }
     }

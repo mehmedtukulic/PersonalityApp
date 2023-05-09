@@ -15,6 +15,10 @@
 		D07DFF392A0AE94900F10B30 /* PersonalityAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF382A0AE94900F10B30 /* PersonalityAppTests.swift */; };
 		D07DFF432A0AE94900F10B30 /* PersonalityAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF422A0AE94900F10B30 /* PersonalityAppUITests.swift */; };
 		D07DFF452A0AE94900F10B30 /* PersonalityAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF442A0AE94900F10B30 /* PersonalityAppUITestsLaunchTests.swift */; };
+		D07DFF5A2A0AF15F00F10B30 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF592A0AF15F00F10B30 /* ApiClient.swift */; };
+		D07DFF5C2A0AF16F00F10B30 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF5B2A0AF16F00F10B30 /* ApiRequest.swift */; };
+		D07DFF602A0AF2FD00F10B30 /* StartPersonalityTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF5E2A0AF2FD00F10B30 /* StartPersonalityTestViewController.swift */; };
+		D07DFF612A0AF2FD00F10B30 /* StartPersonalityTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07DFF5F2A0AF2FD00F10B30 /* StartPersonalityTestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		D07DFF3E2A0AE94900F10B30 /* PersonalityAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalityAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07DFF422A0AE94900F10B30 /* PersonalityAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityAppUITests.swift; sourceTree = "<group>"; };
 		D07DFF442A0AE94900F10B30 /* PersonalityAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D07DFF592A0AF15F00F10B30 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		D07DFF5B2A0AF16F00F10B30 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		D07DFF5E2A0AF2FD00F10B30 /* StartPersonalityTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPersonalityTestViewController.swift; sourceTree = "<group>"; };
+		D07DFF5F2A0AF2FD00F10B30 /* StartPersonalityTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartPersonalityTestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,7 @@
 		D07DFF512A0AEBB700F10B30 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				D07DFF582A0AF14900F10B30 /* Network */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -152,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				D07DFF572A0AEC1400F10B30 /* Initial */,
+				D07DFF5D2A0AF2D700F10B30 /* Start */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -178,6 +188,24 @@
 				D07DFF2C2A0AE94900F10B30 /* LaunchScreen.storyboard */,
 			);
 			path = Initial;
+			sourceTree = "<group>";
+		};
+		D07DFF582A0AF14900F10B30 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D07DFF592A0AF15F00F10B30 /* ApiClient.swift */,
+				D07DFF5B2A0AF16F00F10B30 /* ApiRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D07DFF5D2A0AF2D700F10B30 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				D07DFF5E2A0AF2FD00F10B30 /* StartPersonalityTestViewController.swift */,
+				D07DFF5F2A0AF2FD00F10B30 /* StartPersonalityTestViewController.xib */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +314,7 @@
 			files = (
 				D07DFF2E2A0AE94900F10B30 /* LaunchScreen.storyboard in Resources */,
 				D07DFF2B2A0AE94900F10B30 /* Assets.xcassets in Resources */,
+				D07DFF612A0AF2FD00F10B30 /* StartPersonalityTestViewController.xib in Resources */,
 				D07DFF292A0AE94700F10B30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D07DFF262A0AE94700F10B30 /* ViewController.swift in Sources */,
+				D07DFF602A0AF2FD00F10B30 /* StartPersonalityTestViewController.swift in Sources */,
 				D07DFF222A0AE94700F10B30 /* AppDelegate.swift in Sources */,
+				D07DFF5C2A0AF16F00F10B30 /* ApiRequest.swift in Sources */,
+				D07DFF5A2A0AF15F00F10B30 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
