@@ -10,10 +10,10 @@ import Foundation
 struct Question: Decodable {
     let id: String
     let title: String
-    let answers: [QuestionOption]
+    let answers: [QuestionAnswer]
 }
 
-struct QuestionOption: Decodable {
+struct QuestionAnswer: Decodable {
     let id: String
     let title: String
     let extrovertyScale: Int

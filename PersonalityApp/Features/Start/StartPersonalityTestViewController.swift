@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StartPersonalityTestViewController: UIViewController {
+final class StartPersonalityTestViewController: UIViewController {
 
     @IBAction func startTestTapped(_ sender: Any) {
         let vc = QuestionaryViewController()

@@ -26,6 +26,11 @@
 		D07DFF6D2A0AF7F900F10B30 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF6C2A0AF7F900F10B30 /* Question.swift */; };
 		D07DFF6F2A0AF85900F10B30 /* QuestionsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF6E2A0AF85900F10B30 /* QuestionsRequests.swift */; };
 		D07DFF712A0AF8F400F10B30 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF702A0AF8F400F10B30 /* Observable.swift */; };
+		D07DFF752A0AFDD200F10B30 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF732A0AFDD200F10B30 /* AnswerCell.swift */; };
+		D07DFF762A0AFDD200F10B30 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07DFF742A0AFDD200F10B30 /* AnswerCell.xib */; };
+		D07DFF782A0AFFDF00F10B30 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF772A0AFFDF00F10B30 /* UIViewController+Extension.swift */; };
+		D07DFF7A2A0B000600F10B30 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF792A0B000600F10B30 /* UICollectionView+Extension.swift */; };
+		D07DFF7C2A0B004800F10B30 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF7B2A0B004800F10B30 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		D07DFF6C2A0AF7F900F10B30 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D07DFF6E2A0AF85900F10B30 /* QuestionsRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsRequests.swift; sourceTree = "<group>"; };
 		D07DFF702A0AF8F400F10B30 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		D07DFF732A0AFDD200F10B30 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		D07DFF742A0AFDD200F10B30 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
+		D07DFF772A0AFFDF00F10B30 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D07DFF792A0B000600F10B30 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		D07DFF7B2A0B004800F10B30 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +169,9 @@
 		D07DFF522A0AEBC300F10B30 /* Utils & Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D07DFF772A0AFFDF00F10B30 /* UIViewController+Extension.swift */,
+				D07DFF7B2A0B004800F10B30 /* UIView+Extension.swift */,
+				D07DFF792A0B000600F10B30 /* UICollectionView+Extension.swift */,
 			);
 			path = "Utils & Extensions";
 			sourceTree = "<group>";
@@ -229,6 +242,7 @@
 		D07DFF622A0AF70300F10B30 /* Questionary */ = {
 			isa = PBXGroup;
 			children = (
+				D07DFF722A0AFDA600F10B30 /* views */,
 				D07DFF632A0AF71C00F10B30 /* QuestionaryViewController.swift */,
 				D07DFF642A0AF71C00F10B30 /* QuestionaryViewController.xib */,
 				D07DFF672A0AF73100F10B30 /* QuestionaryViewModel.swift */,
@@ -243,6 +257,15 @@
 				D07DFF6E2A0AF85900F10B30 /* QuestionsRequests.swift */,
 			);
 			path = Questionary;
+			sourceTree = "<group>";
+		};
+		D07DFF722A0AFDA600F10B30 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D07DFF732A0AFDD200F10B30 /* AnswerCell.swift */,
+				D07DFF742A0AFDD200F10B30 /* AnswerCell.xib */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D07DFF2E2A0AE94900F10B30 /* LaunchScreen.storyboard in Resources */,
+				D07DFF762A0AFDD200F10B30 /* AnswerCell.xib in Resources */,
 				D07DFF662A0AF71C00F10B30 /* QuestionaryViewController.xib in Resources */,
 				D07DFF2B2A0AE94900F10B30 /* Assets.xcassets in Resources */,
 				D07DFF612A0AF2FD00F10B30 /* StartPersonalityTestViewController.xib in Resources */,
@@ -379,11 +403,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D07DFF712A0AF8F400F10B30 /* Observable.swift in Sources */,
+				D07DFF782A0AFFDF00F10B30 /* UIViewController+Extension.swift in Sources */,
 				D07DFF262A0AE94700F10B30 /* ViewController.swift in Sources */,
+				D07DFF7C2A0B004800F10B30 /* UIView+Extension.swift in Sources */,
 				D07DFF652A0AF71C00F10B30 /* QuestionaryViewController.swift in Sources */,
+				D07DFF752A0AFDD200F10B30 /* AnswerCell.swift in Sources */,
 				D07DFF602A0AF2FD00F10B30 /* StartPersonalityTestViewController.swift in Sources */,
 				D07DFF6D2A0AF7F900F10B30 /* Question.swift in Sources */,
 				D07DFF222A0AE94700F10B30 /* AppDelegate.swift in Sources */,
+				D07DFF7A2A0B000600F10B30 /* UICollectionView+Extension.swift in Sources */,
 				D07DFF5C2A0AF16F00F10B30 /* ApiRequest.swift in Sources */,
 				D07DFF5A2A0AF15F00F10B30 /* ApiClient.swift in Sources */,
 				D07DFF682A0AF73100F10B30 /* QuestionaryViewModel.swift in Sources */,
