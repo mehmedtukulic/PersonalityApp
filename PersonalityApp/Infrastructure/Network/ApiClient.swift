@@ -12,7 +12,7 @@ protocol APIProtocol {
 }
 
 class APIClient: APIProtocol {
-    func makeRequest<R>(_ session: URLSession = .shared, _ request: APIRequest) async throws -> R where R : Decodable {
+    func makeRequest<R>(_ session: URLSession, _ request: APIRequest) async throws -> R where R : Decodable {
         guard let url = URL(string: request.url) else { throw NetworkingError.invalidUrl }
         var urlRequest = URLRequest(url: url)
 
