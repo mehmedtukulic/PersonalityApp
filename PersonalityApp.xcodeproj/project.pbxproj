@@ -30,6 +30,10 @@
 		D07DFF7C2A0B004800F10B30 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF7B2A0B004800F10B30 /* UIView+Extension.swift */; };
 		D07DFF952A0B18B800F10B30 /* QuestionaryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF832A0B181200F10B30 /* QuestionaryViewModelTests.swift */; };
 		D07DFF962A0B18BB00F10B30 /* QuestionaryRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF812A0B17CE00F10B30 /* QuestionaryRepositoryMock.swift */; };
+		D07DFF992A0B1DF200F10B30 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF982A0B1DF200F10B30 /* PrimaryButton.swift */; };
+		D07DFF9B2A0B1E4300F10B30 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF9A2A0B1E4300F10B30 /* Resources.swift */; };
+		D07DFFA02A0B2C1E00F10B30 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DFF9E2A0B2C1E00F10B30 /* ResultViewController.swift */; };
+		D07DFFA12A0B2C1E00F10B30 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07DFF9F2A0B2C1E00F10B30 /* ResultViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		D07DFF812A0B17CE00F10B30 /* QuestionaryRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionaryRepositoryMock.swift; sourceTree = "<group>"; };
 		D07DFF832A0B181200F10B30 /* QuestionaryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionaryViewModelTests.swift; sourceTree = "<group>"; };
 		D07DFF8B2A0B188F00F10B30 /* PersonalityAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalityAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07DFF982A0B1DF200F10B30 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		D07DFF9A2A0B1E4300F10B30 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		D07DFF9E2A0B2C1E00F10B30 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		D07DFF9F2A0B2C1E00F10B30 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,7 @@
 		D07DFF522A0AEBC300F10B30 /* Utils & Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D07DFF972A0B1DE300F10B30 /* Custom View */,
 				D07DFF772A0AFFDF00F10B30 /* UIViewController+Extension.swift */,
 				D07DFF7B2A0B004800F10B30 /* UIView+Extension.swift */,
 				D07DFF792A0B000600F10B30 /* UICollectionView+Extension.swift */,
@@ -143,6 +152,7 @@
 		D07DFF532A0AEBD800F10B30 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D07DFF9A2A0B1E4300F10B30 /* Resources.swift */,
 				D07DFF2A2A0AE94900F10B30 /* Assets.xcassets */,
 				D07DFF2F2A0AE94900F10B30 /* Info.plist */,
 			);
@@ -155,6 +165,7 @@
 				D07DFF572A0AEC1400F10B30 /* Initial */,
 				D07DFF5D2A0AF2D700F10B30 /* Start */,
 				D07DFF622A0AF70300F10B30 /* Questionary */,
+				D07DFF9D2A0B2BFF00F10B30 /* Result */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -249,6 +260,23 @@
 			path = Questionary;
 			sourceTree = "<group>";
 		};
+		D07DFF972A0B1DE300F10B30 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				D07DFF982A0B1DF200F10B30 /* PrimaryButton.swift */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		D07DFF9D2A0B2BFF00F10B30 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				D07DFF9E2A0B2C1E00F10B30 /* ResultViewController.swift */,
+				D07DFF9F2A0B2C1E00F10B30 /* ResultViewController.xib */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,6 +360,7 @@
 			files = (
 				D07DFF2E2A0AE94900F10B30 /* LaunchScreen.storyboard in Resources */,
 				D07DFF762A0AFDD200F10B30 /* AnswerCell.xib in Resources */,
+				D07DFFA12A0B2C1E00F10B30 /* ResultViewController.xib in Resources */,
 				D07DFF662A0AF71C00F10B30 /* QuestionaryViewController.xib in Resources */,
 				D07DFF2B2A0AE94900F10B30 /* Assets.xcassets in Resources */,
 				D07DFF612A0AF2FD00F10B30 /* StartPersonalityTestViewController.xib in Resources */,
@@ -362,12 +391,15 @@
 				D07DFF602A0AF2FD00F10B30 /* StartPersonalityTestViewController.swift in Sources */,
 				D07DFF6D2A0AF7F900F10B30 /* Question.swift in Sources */,
 				D07DFF222A0AE94700F10B30 /* AppDelegate.swift in Sources */,
+				D07DFF9B2A0B1E4300F10B30 /* Resources.swift in Sources */,
 				D07DFF7A2A0B000600F10B30 /* UICollectionView+Extension.swift in Sources */,
 				D07DFF5C2A0AF16F00F10B30 /* ApiRequest.swift in Sources */,
 				D07DFF5A2A0AF15F00F10B30 /* ApiClient.swift in Sources */,
 				D07DFF682A0AF73100F10B30 /* QuestionaryViewModel.swift in Sources */,
 				D07DFF6B2A0AF7DB00F10B30 /* QuestionsRepository.swift in Sources */,
+				D07DFF992A0B1DF200F10B30 /* PrimaryButton.swift in Sources */,
 				D07DFF6F2A0AF85900F10B30 /* QuestionsRequests.swift in Sources */,
+				D07DFFA02A0B2C1E00F10B30 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -514,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

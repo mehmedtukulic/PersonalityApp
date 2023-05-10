@@ -19,7 +19,7 @@ final class QuestionaryViewModel {
     // MARK: - Private variables
     private var questions: [Question] = []
     private var extrovertyCount: Int = .zero
-    private let maxExtrovertyPerAnswer = 3
+    private let maxExtrovertyPerAnswer = 4
 
     private let questionsRepository: any QuestionsRepositoryProtocol
 

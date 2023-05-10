@@ -16,7 +16,7 @@ final class ViewController: UIViewController {
     }
 
     private func loadInitialScreen() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
             let vc = StartPersonalityTestViewController()
             self?.navigationController?.setViewControllers([vc], animated: true)
         }

@@ -15,8 +15,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="wDs-Q0-JRT">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PERSONALITY APP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojZ-bi-z6M">
+                                <rect key="frame" x="98" y="444.66666666666669" width="197" height="32"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wDs-Q0-JRT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8yX-ZL-O4K"/>
+                            <constraint firstItem="ojZ-bi-z6M" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Ahs-XA-7WY"/>
+                            <constraint firstAttribute="bottom" secondItem="wDs-Q0-JRT" secondAttribute="bottom" id="HTR-eg-Y89"/>
+                            <constraint firstItem="wDs-Q0-JRT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="r76-be-UVP"/>
+                            <constraint firstItem="ojZ-bi-z6M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rHT-3m-gGq"/>
+                            <constraint firstItem="wDs-Q0-JRT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xT9-j0-61g"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LaV-MH-xUD"/>
                 </viewController>
@@ -44,6 +63,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backgroundImage" width="600" height="1076"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

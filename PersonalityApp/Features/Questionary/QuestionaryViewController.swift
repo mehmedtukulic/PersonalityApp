@@ -9,6 +9,7 @@ import UIKit
 
 final class QuestionaryViewController: UIViewController {
     @IBOutlet private weak var questionNumberLabel: UILabel!
+    @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var questionTitleLabel: UILabel!
     @IBOutlet private weak var answersCollectionView: UICollectionView!
 
@@ -19,6 +20,7 @@ final class QuestionaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollection()
+        setScreen()
         bindViewModel()
 
         Task {
@@ -50,16 +52,14 @@ final class QuestionaryViewController: UIViewController {
 
         viewModel.questionaryCompleted.bind { [weak self] completed in
             guard let self, completed else { return }
-
-            questionTitleLabel.text = viewModel.questionaryResult
-            questionNumberLabel.isHidden = true
-            answersCollectionView.isHidden = true
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.navigationController?.popToRootViewController(animated: true)
-            }
-
+            navigateToResults(with: viewModel.questionaryResult)
         }
+    }
+
+    private func setScreen() {
+        containerView.layer.borderWidth = 1
+        containerView.layer.borderColor = Colors.primaryColor.cgColor
+        containerView.layer.cornerRadius = 48
     }
 
     private func setCollection() {
@@ -68,8 +68,11 @@ final class QuestionaryViewController: UIViewController {
         answersCollectionView.dataSource = self
 
         let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+
         answersCollectionView.collectionViewLayout = layout
     }
 
@@ -84,18 +87,20 @@ extension QuestionaryViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(ofType: AnswerCell.self, indexPath: indexPath)
         guard let answer = viewModel.getAnswerForIndex(index: indexPath.row) else { preconditionFailure("answer should not be nil") }
-        cell.titleLabel.text = answer.title
+        cell.configure(with: answer.title, collectionWidth: collectionView.frame.width)
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.answerPicked(index: indexPath.row)
     }
-
 }
 
-extension QuestionaryViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: answersCollectionView.frame.width, height: 48)
+// MARK: - Navigations
+extension QuestionaryViewController {
+    private func navigateToResults(with message: String) {
+        let vc = ResultViewController()
+        vc.setup(message: message)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

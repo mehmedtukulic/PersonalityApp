@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartPersonalityTestViewController" customModule="PersonalityApp" customModuleProvider="target">
             <connections>
+                <outlet property="startButton" destination="VhL-bf-NUX" id="7gF-I9-bFV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +20,11 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhL-bf-NUX">
-                    <rect key="frame" x="101" y="423.66666666666669" width="191" height="30"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ksx-pG-lo0">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhL-bf-NUX" customClass="PrimaryButton" customModule="PersonalityApp" customModuleProvider="target">
+                    <rect key="frame" x="101" y="447.66666666666669" width="191" height="30"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="START PERSONALITY TEST"/>
                     <connections>
@@ -31,12 +36,17 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="VhL-bf-NUX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7bb-lB-eKA"/>
-                <constraint firstItem="VhL-bf-NUX" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="VXU-NU-fiT"/>
+                <constraint firstItem="Ksx-pG-lo0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DbZ-gA-vhL"/>
+                <constraint firstAttribute="bottom" secondItem="Ksx-pG-lo0" secondAttribute="bottom" id="Ffo-dh-xh5"/>
+                <constraint firstItem="Ksx-pG-lo0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZHt-KT-lVh"/>
+                <constraint firstAttribute="trailing" secondItem="Ksx-pG-lo0" secondAttribute="trailing" id="ixJ-Od-zC7"/>
+                <constraint firstItem="VhL-bf-NUX" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="24" id="zvC-bQ-i1N"/>
             </constraints>
-            <point key="canvasLocation" x="85" y="20"/>
+            <point key="canvasLocation" x="84.732824427480907" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="backgroundImage" width="600" height="1076"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

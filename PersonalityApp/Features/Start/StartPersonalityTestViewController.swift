@@ -9,6 +9,13 @@ import UIKit
 
 final class StartPersonalityTestViewController: UIViewController {
 
+    @IBOutlet private weak var startButton: PrimaryButton! {
+        didSet {
+            startButton.setButtonTitle("START PERSONALITY TEST")
+        }
+    }
+
+
     @IBAction func startTestTapped(_ sender: Any) {
         let vc = QuestionaryViewController()
         navigationController?.pushViewController(vc, animated: true)
